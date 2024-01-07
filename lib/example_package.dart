@@ -41,7 +41,7 @@ class MIAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       this.actionsIconTheme =
           const IconThemeData(color: Colors.black, size: 36),
       this.shadowColor,
-      this.sideMargin = 1,
+      this.sideMargin = 0,
       this.gradient,
       this.gradientRadius,
       this.statusBarColor})
