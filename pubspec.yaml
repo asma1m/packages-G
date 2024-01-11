@@ -1,7 +1,8 @@
 name: example_package
 description: A new Flutter package project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/asma1m/MIAppBarWidget
+
 
 environment:
   sdk: '>=3.0.1 <4.0.0'
@@ -10,6 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
