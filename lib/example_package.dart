@@ -5,9 +5,9 @@ export "example_package.dart";
 class MIAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final Widget? leading;
   final double? leadingWidth;
-  final bool automaticallyImplyLeading; 
+  final bool automaticallyImplyLeading;
   final Widget title;
-  final Function(BuildContext context)  onBackButtonTapped;
+  final Function(BuildContext context) onBackButtonTapped;
   final TextStyle? titleTextStyle;
   final List<Widget>? actions;
   final bool centerTitle;
@@ -19,33 +19,31 @@ class MIAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final IconThemeData? actionsIconTheme;
   final Color? shadowColor;
   final double sideMargin;
-  final Color? statusBarColor;
+
   final Gradient? gradient;
   final BorderRadiusGeometry? gradientRadius;
 
-  const MIAppBarWidget(
-      {Key? key,
-      this.leading,
-      this.automaticallyImplyLeading = false,
-      required this.onBackButtonTapped,
-      required this.title,
-      this.titleTextStyle,
-      this.actions,
-      this.centerTitle = false,
-      this.toolbarHeight = 60,
-      this.toolbarOpacity = 1,
-      this.shapeBorder,
-      this.elevation = 8,
-      this.backgroundColor,
-      this.leadingWidth = 56,
-      this.actionsIconTheme =
-          const IconThemeData(color: Colors.black, size: 36),
-      this.shadowColor,
-      this.sideMargin = 0,
-      this.gradient,
-      this.gradientRadius,
-      this.statusBarColor})
-      : super(key: key);
+  const MIAppBarWidget({
+    Key? key,
+    this.leading,
+    this.automaticallyImplyLeading = false,
+    required this.onBackButtonTapped,
+    required this.title,
+    this.titleTextStyle,
+    this.actions,
+    this.centerTitle = false,
+    this.toolbarHeight = 60,
+    this.toolbarOpacity = 1,
+    this.shapeBorder,
+    this.elevation = 8,
+    this.backgroundColor,
+    this.leadingWidth = 56,
+    this.actionsIconTheme = const IconThemeData(color: Colors.black, size: 36),
+    this.shadowColor,
+    this.sideMargin = 0,
+    this.gradient,
+    this.gradientRadius,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -73,9 +71,9 @@ class MIAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
             toolbarOpacity: toolbarOpacity,
             backgroundColor: backgroundColor,
             shadowColor: shadowColor,
-            systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarColor: statusBarColor, // Status bar only for android.
-            ),
+            systemOverlayStyle: const SystemUiOverlayStyle(
+                // Status bar only for android.
+                ),
             shape: shapeBorder),
       ),
     );
